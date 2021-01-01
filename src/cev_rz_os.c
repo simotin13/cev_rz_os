@@ -35,7 +35,20 @@ extern void __main()
 int main(void) {
 
     while(1) {
-	// TODO: add application code here
+    	int i = 0;
+
+    	// P7_8 LED1(Red)
+    	// P7_9 LED2(Red)
+    	GPIOPMC7	= 0x0000;	// Port Mode Control Register
+    	GPIOPM7		= 0x0000;	// Port Mode Register
+    	GPIOP7		= 0x0000;	// Port Register
+    	uint16_t val = 0x300;
+    	// P7_8,P7_9
+        while(1) {
+        	for(i = 0; i < 1000000; i++);
+    		GPIOP7		^= val;	// Port Register
+    		// TODO: add application code here
+        }
     }
-return 0;
+	return 0;
 }
