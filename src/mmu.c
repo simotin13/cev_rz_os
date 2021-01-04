@@ -23,6 +23,7 @@
 #define AP_SU_R_U_DISABLE           (0x05)          // アクセス許可設定 特権:Read           ユーザ:アクセス禁止
 #define AP_BOTH_R                   (0x06)          // アクセス許可設定 特権:Read           ユーザ:Read
 
+
 void initialize_page_table(uint32_t* pTable)
 {
     int i;

@@ -10,7 +10,11 @@
 #include <typedefine.h>
 #include <iodefine.h>
 
+extern void initialize_page_table(uint32_t* pTable);
+
 int main(void) {
+	uint32_t *page_table = (uint32_t *)0x20080000;
+	initialize_page_table(page_table);
     while(1) {
     	int i = 0;
 

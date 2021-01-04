@@ -97,10 +97,7 @@ vfp_init:
      beq    exit
      mov    sp, r11
 
-#ifndef SIMULATOR_DEBUG
-/* call the hardware initialiser */
-    bl    HardwareSetup
-#endif
+    bl    _initialize_mmu
 
 /* start user program */
     bl    main
